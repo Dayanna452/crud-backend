@@ -1,5 +1,5 @@
 const { ValidationError } = require('sequelize');
-const { config } = require('../config/config');
+const { config } = require('../api/config/config');
 
 function logErrors (err, req, res, next) {
   if (config.isDev) {
