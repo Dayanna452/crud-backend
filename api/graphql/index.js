@@ -12,6 +12,7 @@ const useGraphql = async (app) => {
     resolvers,
     context: ({ req, res }) => buildContext({ req, res }),
     playground: true,
+    introspection : true,
     plugins: [ApolloServerPluginLandingPageGraphQLPlayground],
   });
 
