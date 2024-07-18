@@ -14,7 +14,7 @@ const createApp = async () => {
 
   require('./utils/auth');
 
-  app.get('/api', (req, res) => {
+  app.get('/', (req, res) => {
     console.log('')
     const response =`
     <h1>Hola mi server en express</h1>
