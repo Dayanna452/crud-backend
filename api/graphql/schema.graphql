@@ -1,0 +1,43 @@
+type Query {
+  #Users
+  users: [User!]!
+  user(id: ID!): User
+}
+
+type Mutation {
+  #Auth
+  login (email: String!, password: String!): AuthResponse
+  #Users
+  addUser(dto: CreateUserInput!): User
+  updateUser(id: ID!, dto: UpdateUserInput!): User
+  deleteUser(id: ID!): ID
+}
+
+type AuthResponse {
+  access_token: String!
+  user: User!
+}
+
+type User {
+  id: ID!
+  name: String!
+  email: String!
+  role: String
+  createdAt: String!
+  password: String!
+}
+
+input CreateUserInput {
+  name: String!
+  email: String!
+  password: String!
+  role: String!
+}
+
+input UpdateUserInput {
+  name: String
+  email: String
+  password: String
+  role: String
+}
+
