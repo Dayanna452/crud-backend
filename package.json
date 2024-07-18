@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "SET NODE_ENV=development & nodemon api/index.js",
-    "start": "node api/index.js",
+    "dev": "SET NODE_ENV=development & nodemon index.js",
+    "start": "node index.js",
     "lint": "eslint",
+    "test": "echo \"Error: no test specified\" && exit 1",
     "seed:all": "sequelize-cli db:seed:all",
     "seed:undo": "sequelize-cli db:seed:undo:all",
     "migrations:generate": "sequelize-cli migration:generate --name",
