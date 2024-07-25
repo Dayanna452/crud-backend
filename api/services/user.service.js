@@ -13,7 +13,7 @@ class UserService {
       password: hash,
       role: "admin",
     });
-    delete newUser.dataValues.password;
+    //delete newUser.dataValues.password;
     return newUser;
   }
 
